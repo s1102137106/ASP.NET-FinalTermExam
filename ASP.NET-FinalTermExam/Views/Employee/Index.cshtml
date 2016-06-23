@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ASP.NET_FinalTermExam.Models.EmployeeIndexViewModels>
+
+@{
+    ViewBag.Title = "查詢員工";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("新增員工", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           編號
+        </th>
+        <th>
+           姓名
+        </th>
+        <th>
+           職稱
+        </th>
+        <th>
+           任職日期
+        </th>
+        <th>
+          性別
+        </th>
+        <th>
+          年齡
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeID)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HireDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.age)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.EmployeeID  })
+        </td>
+    </tr>
+}
+
+</table>
