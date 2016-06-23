@@ -134,7 +134,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
-    <Content Include="Solution\1102137106周子策_FinalTermExam.doc.docx" />
+    <Content Include="Solution\1102137106周子策_FinalTermExam.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
